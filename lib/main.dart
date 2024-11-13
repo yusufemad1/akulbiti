@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-/fffff
 import 'features/layout_view.dart';
 import 'features/settings_provider.dart';
-
+//bdfunhsdujfndjfn
 void main() {
   runApp(
     ChangeNotifierProvider(
