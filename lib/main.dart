@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'features/layout_view.dart';
 import 'features/settings_provider.dart';
+//123456789tyjujikojhg
 void main() {
   runApp(
     ChangeNotifierProvider(
@@ -23,11 +24,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Akl Beti',
       debugShowCheckedModeBanner: false,
-      initialRoute: Loginview.routeName,
+      initialRoute: LayoutView.routeName,
       routes: {
         LayoutView.routeName: (context) => LayoutView(),
-        Loginview.routeName:(context)=> Loginview(),
-        RegisterView.routeName:(context) =>RegisterView(),
+        Loginview.routeName:(context) => Loginview(),
+        RegisterView.routeName:(context) => RegisterView(),
       },
     );
   }
