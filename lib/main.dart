@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'core/config/application_theme_manager.dart';
 import 'features/layout_view.dart';
 import 'features/settings_provider.dart';
-import 'features/welcome_view.dart';
+//123456789tyjujikojhgsdfgh
 void main() {
   runApp(
     ChangeNotifierProvider(
@@ -23,14 +22,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Akl Beti',
       debugShowCheckedModeBanner: false,
-      theme: ApplicationThemeManager.lightThemeData,
-      darkTheme: ApplicationThemeManager.darkThemeData,
-      themeMode: vm.currentThemeMode,
-      initialRoute: WelcomeView.routeName,
+      initialRoute: LayoutView.routeName,
       routes: {
-        LayoutView.routeName: (context) => const LayoutView(),
-        WelcomeView.routeName: (context) => const WelcomeView(),
-
+        LayoutView.routeName: (context) => LayoutView(),
       },
     );
   }
