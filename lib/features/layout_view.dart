@@ -13,13 +13,15 @@ class LayoutView extends StatelessWidget {
     return   Scaffold(
       body: vm.screans[vm.currentIndex],
       bottomNavigationBar: BottomAppBar(
+        height: 90,
+        notchMargin: 10,
         elevation: 0,
-        shape: CircularNotchedRectangle(),
-        notchMargin: 12,
+        // shape: const CircularNotchedRectangle(),
+        // notchMargin: 12,
         child: BottomNavigationBar(
           currentIndex: vm.currentIndex,
           onTap: vm.changeIndex,
-          items: [
+          items: const [
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home,
@@ -32,6 +34,7 @@ class LayoutView extends StatelessWidget {
                 label: "Settings")
           ],
         ),
-      ),    );
+      ),
+        );
   }
 }

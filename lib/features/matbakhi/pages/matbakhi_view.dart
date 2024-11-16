@@ -5,6 +5,6 @@ class MatbakhiView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Text('matbakhi');
+    return  const SingleChildScrollView(child:  Text('matbakhi'));
   }
 }
