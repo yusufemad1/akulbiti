@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       theme: ApplicationThemeManager.lightThemeData,
       darkTheme: ApplicationThemeManager.darkThemeData,
       themeMode: vm.currentThemeMode,
-      initialRoute: WelcomeView.routeName,
+      initialRoute: LayoutView.routeName,
       routes: {
         LayoutView.routeName: (context) => const LayoutView(),
         Loginview.routeName:(context) => Loginview(),
