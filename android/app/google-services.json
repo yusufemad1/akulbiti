@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "582259882959",
-    "project_id": "akulbiti-b9059",
-    "storage_bucket": "akulbiti-b9059.firebasestorage.app"
+    "project_number": "929006144027",
+    "project_id": "akl-beti",
+    "storage_bucket": "akl-beti.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:582259882959:android:5c9639a3c3c687ab2b30ba",
+        "mobilesdk_app_id": "1:929006144027:android:a9b87f074b3c95366046be",
         "android_client_info": {
           "package_name": "com.example.akulbiti"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAJmeszwuHcSp2X2Bg5IfHLLgf6nAqSNIw"
+          "current_key": "AIzaSyBJMKmaAkwpeeix-YQadGYfqFJPRJUCjJc"
         }
       ],
       "services": {

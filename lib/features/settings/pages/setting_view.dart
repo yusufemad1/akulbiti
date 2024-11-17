@@ -5,6 +5,7 @@ class SettingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const SingleChildScrollView(child: Text('setting'));
-  }
+    return const Text('setting',style: TextStyle(color: Colors.black,fontSize: 30)
+
+    );  }
 }
