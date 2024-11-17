@@ -1,9 +1,18 @@
+import 'package:akulbiti/features/Register/pages/register.dart';
+import 'package:akulbiti/features/login/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'features/Home/page/HomePage.dart';
 import 'features/layout_view.dart';
 import 'features/settings_provider.dart';
-//bdfunhsdujfndjfn
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+//123456789tyjujikojhg
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );
   runApp(
     ChangeNotifierProvider(
       create: (context) => SettingsProvider(),
@@ -22,9 +31,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Akl Beti',
       debugShowCheckedModeBanner: false,
-      initialRoute: LayoutView.routeName,
+      initialRoute: RegisterView.routeName,
       routes: {
         LayoutView.routeName: (context) => LayoutView(),
+        Loginview.routeName:(context) => Loginview(),
+        RegisterView.routeName:(context) => RegisterView(),
+        HomePage.routeName:(context) => HomePage(),
+
       },
     );
   }
