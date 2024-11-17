@@ -10,11 +10,24 @@ class WelcomeView extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: theme.primaryColor,
-      body:  const Column(
-        children: [
-
-
-        ],
+      body: Center(
+        child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: BoxDecoration(
+            color: theme.primaryColor,
+            image: const DecorationImage(
+              image: AssetImage('asstes/image/Create Account Options.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: const Center(
+            child: Text(
+              'نص فوق الخلفية',
+              style: TextStyle(color: Colors.white, fontSize: 24),
+            ),
+          ),
+        ),
       ),
     );
   }

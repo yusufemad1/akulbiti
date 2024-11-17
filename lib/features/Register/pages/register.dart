@@ -35,14 +35,14 @@ class RegisterView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 40,bottom: 10),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 40,bottom: 10),
                       child: Text("Hello! Create Account",style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.w700,
                       ),),
                     ),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('Already have an account? ',style: TextStyle(
@@ -60,7 +60,7 @@ class RegisterView extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 40,),
+              const SizedBox(height: 40,),
               Container(
                 width: 350,
                 height: 50,
@@ -82,7 +82,7 @@ class RegisterView extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               Container(
                 width: 350,
                 height: 50,
@@ -113,7 +113,7 @@ class RegisterView extends StatelessWidget {
 
                 ),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Container(
                 width: 350,
                 height: 50,
@@ -127,7 +127,7 @@ class RegisterView extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15),
                     ),  // حدود للحقل
                     suffixIcon: IconButton(
-                      icon: Icon(Icons.visibility),  // أيقونة لرؤية كلمة المرور
+                      icon: const Icon(Icons.visibility),  // أيقونة لرؤية كلمة المرور
                       onPressed: () {
                       },
                     ),
