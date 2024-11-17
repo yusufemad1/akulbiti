@@ -1,8 +1,10 @@
+import 'package:akulbiti/features/Register/pages/register.dart';
+import 'package:akulbiti/features/login/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'features/layout_view.dart';
 import 'features/settings_provider.dart';
-//123456789tyjujikojhgsdfgh
+//123456789tyjujikojhg
 void main() {
   runApp(
     ChangeNotifierProvider(
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
       initialRoute: LayoutView.routeName,
       routes: {
         LayoutView.routeName: (context) => LayoutView(),
+        Loginview.routeName:(context) => Loginview(),
+        RegisterView.routeName:(context) => RegisterView(),
       },
     );
   }
