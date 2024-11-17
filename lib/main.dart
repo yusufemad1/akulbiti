@@ -2,6 +2,7 @@ import 'package:akulbiti/features/Register/pages/register.dart';
 import 'package:akulbiti/features/login/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'core/config/application_theme_manager.dart';
 import 'features/Home/page/HomePage.dart';
 import 'features/layout_view.dart';
 import 'features/settings_provider.dart';
@@ -31,6 +32,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Akl Beti',
       debugShowCheckedModeBanner: false,
+      theme: ApplicationThemeManager.lightThemeData,
+      darkTheme: ApplicationThemeManager.darkThemeData,
+      themeMode: vm.currentThemeMode,
       initialRoute: WelcomeView.routeName,
       routes: {
         LayoutView.routeName: (context) => const LayoutView(),

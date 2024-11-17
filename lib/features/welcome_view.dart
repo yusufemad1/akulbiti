@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'Register/pages/register.dart';
+import 'login/pages/login.dart';
+
 class WelcomeView extends StatelessWidget {
   static String routeName = 'WelcomeView';
+
   const WelcomeView({super.key});
 
   @override
@@ -21,11 +25,67 @@ class WelcomeView extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: const Center(
-            child: Text(
-              'نص فوق الخلفية',
-              style: TextStyle(color: Colors.white, fontSize: 24),
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Spacer(),
+              Padding(
+                padding: const EdgeInsets.all(17),
+                child: const Text(
+                  'Help your path to health goals with happiness',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    Loginview.routeName,
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 150, vertical: 15), // لتحديد حجم الزر
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(16), // حواف دائرية للزر
+                    ),
+                    backgroundColor: Colors.black // لون الخلفية
+                    ),
+                child: const Text(
+                    'Login',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ), // تحديد نمط النص
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 50),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      RegisterView.routeName,
+                    );
+                  },
+                  child: const Text(
+                    "Create New Account",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
