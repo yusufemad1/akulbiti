@@ -27,10 +27,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -44,38 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAiKeEzR0NPJQgBr7RdYk4t9rYRzOpTX7g',
-    appId: '1:582259882959:web:213f352ac1b6100d2b30ba',
-    messagingSenderId: '582259882959',
-    projectId: 'akulbiti-b9059',
-    authDomain: 'akulbiti-b9059.firebaseapp.com',
-    storageBucket: 'akulbiti-b9059.firebasestorage.app',
-    measurementId: 'G-C7ZRL4GPRB',
+    apiKey: 'AIzaSyBkzq4mgGxrwif9XFkX9DDR12IYIZSF08k',
+    appId: '1:929006144027:web:44c327ac54cd71406046be',
+    messagingSenderId: '929006144027',
+    projectId: 'akl-beti',
+    authDomain: 'akl-beti.firebaseapp.com',
+    storageBucket: 'akl-beti.firebasestorage.app',
+    measurementId: 'G-1JEF9VN2BX',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAJmeszwuHcSp2X2Bg5IfHLLgf6nAqSNIw',
-    appId: '1:582259882959:android:5c9639a3c3c687ab2b30ba',
-    messagingSenderId: '582259882959',
-    projectId: 'akulbiti-b9059',
-    storageBucket: 'akulbiti-b9059.firebasestorage.app',
+    apiKey: 'AIzaSyBJMKmaAkwpeeix-YQadGYfqFJPRJUCjJc',
+    appId: '1:929006144027:android:a9b87f074b3c95366046be',
+    messagingSenderId: '929006144027',
+    projectId: 'akl-beti',
+    storageBucket: 'akl-beti.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCJaKNMhAKRs8jARy0fWlLG5RffxLrTTlM',
-    appId: '1:582259882959:ios:80b8aae348a6b9132b30ba',
-    messagingSenderId: '582259882959',
-    projectId: 'akulbiti-b9059',
-    storageBucket: 'akulbiti-b9059.firebasestorage.app',
+    apiKey: 'AIzaSyBDw2Ef2hv-rn1mEnsj_QTidOmhDb942RQ',
+    appId: '1:929006144027:ios:4c490b80b58d0d126046be',
+    messagingSenderId: '929006144027',
+    projectId: 'akl-beti',
+    storageBucket: 'akl-beti.firebasestorage.app',
     iosBundleId: 'com.example.akulbiti',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCJaKNMhAKRs8jARy0fWlLG5RffxLrTTlM',
-    appId: '1:582259882959:ios:41f55e54157ea5f42b30ba',
-    messagingSenderId: '582259882959',
-    projectId: 'akulbiti-b9059',
-    storageBucket: 'akulbiti-b9059.firebasestorage.app',
-    iosBundleId: 'com.example.akulbiti.RunnerTests',
+    apiKey: 'AIzaSyBDw2Ef2hv-rn1mEnsj_QTidOmhDb942RQ',
+    appId: '1:929006144027:ios:4c490b80b58d0d126046be',
+    messagingSenderId: '929006144027',
+    projectId: 'akl-beti',
+    storageBucket: 'akl-beti.firebasestorage.app',
+    iosBundleId: 'com.example.akulbiti',
   );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyBkzq4mgGxrwif9XFkX9DDR12IYIZSF08k',
+    appId: '1:929006144027:web:11640c6063f4fb9c6046be',
+    messagingSenderId: '929006144027',
+    projectId: 'akl-beti',
+    authDomain: 'akl-beti.firebaseapp.com',
+    storageBucket: 'akl-beti.firebasestorage.app',
+    measurementId: 'G-54W30KJDKK',
+  );
+
 }

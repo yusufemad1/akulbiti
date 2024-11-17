@@ -4,34 +4,48 @@ import 'package:provider/provider.dart';
 
 class LayoutView extends StatelessWidget {
   static String routeName = 'layoutView';
+
   const LayoutView({super.key});
 
   @override
   Widget build(BuildContext context) {
     var vm = Provider.of<SettingsProvider>(context);
+    var theme = Theme.of(context);
 
-    return   Scaffold(
+    return Scaffold(
+      backgroundColor: Colors.white,
       body: vm.screans[vm.currentIndex],
-      bottomNavigationBar: BottomAppBar(
-        elevation: 0,
-        shape: CircularNotchedRectangle(),
-        notchMargin: 12,
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(20.0),
+            topRight: Radius.circular(20.0),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: theme.primaryColor,
+              blurRadius: 10.0,
+              spreadRadius: 2.0,
+            ),
+          ],
+        ),
         child: BottomNavigationBar(
           currentIndex: vm.currentIndex,
           onTap: vm.changeIndex,
-          items: [
+          items: const [
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home,
-                ),
+              icon: Image(image:AssetImage('asstes/image/Home.png')),
                 label: "Home"),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.settings_outlined,
-                ),
+                icon: Image(image:AssetImage('asstes/image/Search Icon.png')),
+                label: "Search"),
+            BottomNavigationBarItem(
+                icon: Image(image:AssetImage('asstes/image/Profile Icon .png')),
                 label: "Settings")
           ],
         ),
-      ),    );
+      ),
+    );
   }
 }

@@ -5,6 +5,7 @@ class MatbakhiView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Text('matbakhi');
-  }
+    return const Text('matbakhi',style: TextStyle(color: Colors.black,fontSize: 30)
+
+    );  }
 }

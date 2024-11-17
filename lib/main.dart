@@ -6,8 +6,8 @@ import 'features/Home/page/HomePage.dart';
 import 'features/layout_view.dart';
 import 'features/settings_provider.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'features/welcome_view.dart';
 import 'firebase_options.dart';
-//123456789tyjujikojhg
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -31,12 +31,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Akl Beti',
       debugShowCheckedModeBanner: false,
-      initialRoute: RegisterView.routeName,
+      initialRoute: WelcomeView.routeName,
       routes: {
-        LayoutView.routeName: (context) => LayoutView(),
+        LayoutView.routeName: (context) => const LayoutView(),
         Loginview.routeName:(context) => Loginview(),
         RegisterView.routeName:(context) => RegisterView(),
-        HomePage.routeName:(context) => HomePage(),
+        HomePage.routeName:(context) => const HomePage(),
+        WelcomeView.routeName:(context) => const WelcomeView(),
+
 
       },
     );
