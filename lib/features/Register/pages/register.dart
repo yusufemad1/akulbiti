@@ -42,18 +42,25 @@ class RegisterView extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                       ),),
                     ),
-                    const Row(
+                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('Already have an account? ',style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 15,
                         ),),
-                        Text('Sign in',style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 15,
-                          color: Color(0xff70B9BE),
-                        ),),
+
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.pushNamed(context, Loginview.routeName);
+                          },
+                          child: Text('Sign in',style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 15,
+                            color: Color(0xff70B9BE),
+                          ),
+                          ),
+                        ),
                       ],
                     )
 
