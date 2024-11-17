@@ -1,17 +1,43 @@
 import 'package:akulbiti/features/Home/page/HomePage.dart';
+import 'package:akulbiti/features/Register/pages/register.dart';
 import 'package:akulbiti/features/firebaseUtils.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../layout_view.dart';
 import '../../settings_provider.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
-class Loginview extends StatelessWidget {
+class Loginview extends StatefulWidget {
   static String routeName = 'loginview';
+
+   Loginview({super.key});
+
+  @override
+  State<Loginview> createState() => _LoginviewState();
+}
+
+class _LoginviewState extends State<Loginview> {
   var emailController=TextEditingController();
   var passwordController=TextEditingController();
   var formkey= GlobalKey<FormState>();
+  Future<UserCredential> signInWithGoogle() async {
+    // Trigger the authentication flow
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
-   Loginview({super.key});
+    // Obtain the auth details from the request
+    final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+
+    // Create a new credential
+    final credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth?.accessToken,
+      idToken: googleAuth?.idToken,
+    );
+
+    // Once signed in, return the UserCredential
+    return await FirebaseAuth.instance.signInWithCredential(credential);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,11 +75,16 @@ class Loginview extends StatelessWidget {
                           color: Colors.grey
                       ),),
                     ),
-                    Text("Or Create new account",style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
-                      color:   Color(0xff70B9BE),
-                    ),),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.pushNamed(context, RegisterView.routeName);
+                      },
+                      child: Text("Or Create new account",style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color:   Color(0xff70B9BE),
+                      ),),
+                    ),
 
                   ],
                 ),
@@ -115,7 +146,7 @@ class Loginview extends StatelessWidget {
                         if(formkey.currentState!.validate()){
                           FirebaseUtils().loginUserAccount(emailController.text, passwordController.text);
                         }
-                        Navigator.pushNamed(context, HomePage.routeName);
+                        Navigator.pushNamed(context, LayoutView.routeName);
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 150, vertical: 15), // لتحديد حجم الزر
@@ -183,7 +214,7 @@ class Loginview extends StatelessWidget {
                     children: [
                       ElevatedButton(
                         onPressed: () {
-                          print('Sign In button pressed');
+                         signInWithGoogle();
                         },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(horizontal:20, vertical: 15), // لتحديد حجم الزر
