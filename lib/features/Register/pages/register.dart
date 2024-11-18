@@ -45,7 +45,7 @@ class RegisterView extends StatelessWidget {
                      Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Already have an account? ',style: TextStyle(
+                        const Text('Already have an account? ',style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 15,
                         ),),
@@ -54,7 +54,7 @@ class RegisterView extends StatelessWidget {
                           onTap: (){
                             Navigator.pushNamed(context, Loginview.routeName);
                           },
-                          child: Text('Sign in',style: TextStyle(
+                          child: const Text('Sign in',style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 15,
                             color: Color(0xff70B9BE),
@@ -73,7 +73,6 @@ class RegisterView extends StatelessWidget {
                 height: 50,
                 child: TextFormField(
                   controller:nameController ,
-                  obscureText: true,  // يجعل النص مخفيًا (مثل كلمة المرور)
                   decoration: InputDecoration(
                     labelText: 'Your name',
 
@@ -126,7 +125,7 @@ class RegisterView extends StatelessWidget {
                 height: 50,
                 child: TextFormField(
                   controller:passwordController ,
-                  obscureText: false,  // يجعل النص مخفيًا (مثل كلمة المرور)
+                  obscureText: true,  // يجعل النص مخفيًا (مثل كلمة المرور)
                   decoration: InputDecoration(
                     labelText: 'passwoed',
 
