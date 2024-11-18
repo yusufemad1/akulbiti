@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: EdgeInsets.only(left: 20,top: 20),
             child: Row(
               children: [
                 Icon(Icons.sunny),
@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const Padding(
-            padding: EdgeInsets.only(left: 20,),
+            padding: EdgeInsets.only(left: 22,),
             child: Text(
               'AKL BEYTI',
               style: TextStyle(
