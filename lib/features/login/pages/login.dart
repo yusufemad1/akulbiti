@@ -1,8 +1,8 @@
-import 'package:akulbiti/features/Home/page/HomePage.dart';
 import 'package:akulbiti/features/firebaseUtils.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../layout_view.dart';
 import '../../settings_provider.dart';
 
 class Loginview extends StatelessWidget {
@@ -34,22 +34,22 @@ class Loginview extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 40,bottom: 10),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 40,bottom: 10),
                       child: Text("Welcome Back",style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.w700,
                       ),),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 10),
+                    const Padding(
+                      padding: EdgeInsets.only(bottom: 10),
                       child: Text("Hello Jos, sign in to continue!",style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
                           color: Colors.grey
                       ),),
                     ),
-                    Text("Or Create new account",style: TextStyle(
+                    const Text("Or Create new account",style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
                       color:   Color(0xff70B9BE),
@@ -58,7 +58,7 @@ class Loginview extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 40,),
+              const SizedBox(height: 40,),
               Container(
                 width: 350,
                 height: 50,
@@ -79,7 +79,7 @@ class Loginview extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               Container(
                 width: 350,
                 height: 50,
@@ -106,7 +106,7 @@ class Loginview extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Container(
                 child: Column(
                   children: [
@@ -115,35 +115,35 @@ class Loginview extends StatelessWidget {
                         if(formkey.currentState!.validate()){
                           FirebaseUtils().loginUserAccount(emailController.text, passwordController.text);
                         }
-                        Navigator.pushNamed(context, HomePage.routeName);
+                        Navigator.pushNamed(context, LayoutView.routeName);
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(horizontal: 150, vertical: 15), // لتحديد حجم الزر
+                        padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 15), // لتحديد حجم الزر
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),  // حواف دائرية للزر
                         ),
-                        backgroundColor: Color(0xff70B9BE),  // لون الخلفية
+                        backgroundColor: const Color(0xff70B9BE),  // لون الخلفية
                       ),
-                      child: Text(
+                      child: const Text(
                         'Sign In',
                         style: TextStyle(fontSize: 18, color: Colors.white),  // تحديد نمط النص
                       ),
                     ),
-                    SizedBox(height: 15,),
-                    Text('Forgot Password?',style: TextStyle(
+                    const SizedBox(height: 15,),
+                    const Text('Forgot Password?',style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: Color(0xff70B9BE),
                     ),),
-                    SizedBox(height: 10,),
-                    Text("OR",style: TextStyle(
+                    const SizedBox(height: 10,),
+                    const Text("OR",style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
                     ),)
                   ],
                 ),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Container(
                 child: Container(
                   width: 350,
@@ -154,7 +154,7 @@ class Loginview extends StatelessWidget {
                           print('Sign In button pressed');
                         },
                         style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.symmetric(horizontal:20, vertical: 15), // لتحديد حجم الزر
+                          padding: const EdgeInsets.symmetric(horizontal:20, vertical: 15), // لتحديد حجم الزر
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),  // حواف دائرية للزر
                           ),
@@ -164,7 +164,7 @@ class Loginview extends StatelessWidget {
                             children: [
                               Image.asset("asstes/image/Facebook - Logo.png"),
                               SizedBox(width: 50,),
-                              Text('Connect with Facebook',style: TextStyle(
+                              const Text('Connect with Facebook',style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 15
                               ),),
@@ -175,9 +175,8 @@ class Loginview extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               Container(
-                child: Container(
                   width: 350,
                   child: Column(
                     children: [
@@ -186,7 +185,7 @@ class Loginview extends StatelessWidget {
                           print('Sign In button pressed');
                         },
                         style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.symmetric(horizontal:20, vertical: 15), // لتحديد حجم الزر
+                          padding: const EdgeInsets.symmetric(horizontal:20, vertical: 15), // لتحديد حجم الزر
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15),  // حواف دائرية للزر
                           ),
@@ -195,8 +194,8 @@ class Loginview extends StatelessWidget {
                         child: Row(
                           children: [
                             Image.asset("asstes/image/Google - Logo.png"),
-                            SizedBox(width: 50,),
-                            Text('Connect with Google',style: TextStyle(
+                            const SizedBox(width: 50,),
+                            const Text('Connect with Google',style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 15
                             ),),
@@ -206,7 +205,7 @@ class Loginview extends StatelessWidget {
                     ],
                   ),
                 ),
-              ),
+
             ],
           ),
         ),

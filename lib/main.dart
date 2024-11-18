@@ -2,7 +2,6 @@ import 'package:akulbiti/features/Register/pages/register.dart';
 import 'package:akulbiti/features/login/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'features/Home/page/HomePage.dart';
 import 'features/layout_view.dart';
 import 'features/settings_provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -36,7 +35,6 @@ class MyApp extends StatelessWidget {
         LayoutView.routeName: (context) => const LayoutView(),
         Loginview.routeName:(context) => Loginview(),
         RegisterView.routeName:(context) => RegisterView(),
-        HomePage.routeName:(context) => const HomePage(),
         WelcomeView.routeName:(context) => const WelcomeView(),
 
 
