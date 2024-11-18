@@ -13,7 +13,7 @@ class LayoutView extends StatelessWidget {
     var theme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xffF5F5F5),
       body: vm.screans[vm.currentIndex],
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
