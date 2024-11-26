@@ -1,3 +1,6 @@
+import 'package:akulbiti/features/food/pages/food_view.dart';
+import 'package:akulbiti/features/readyToCook/pages/ready_to_cook.dart';
+import 'package:akulbiti/features/sweet/pages/sweet_view.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -90,103 +93,130 @@ class HomePage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.only(right: 20, left: 20, bottom: 20),
                 children: <Widget>[
-                  Container(
-                    width: 270,
-                    height: 200,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF3DA0A7),
-                      borderRadius: BorderRadius.circular(15), // حواف دائرية
-                      image: const DecorationImage(
-                        image: AssetImage('asstes/image/Card.png'),
-                        // صورة من مجلد assets
-                        fit: BoxFit.cover,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        FoodView.routeName,
+                      );
+                    },
+                    child: Container(
+                      width: 270,
+                      height: 200,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF3DA0A7),
+                        borderRadius: BorderRadius.circular(15), // حواف دائرية
+                        image: const DecorationImage(
+                          image: AssetImage('asstes/image/Card.png'),
+                          // صورة من مجلد assets
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    ),
-                    child: const Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Spacer(),
-                        Padding(
-                          padding:
-                              EdgeInsets.only(left: 15, bottom: 25, right: 60),
-                          child: Text(
-                            'Healthy Taco Salad with fresh vegetable',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                      child: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Spacer(),
+                          Padding(
+                            padding:
+                                EdgeInsets.only(left: 15, bottom: 25, right: 60),
+                            child: Text(
+                              'FOOD',
+                              style: TextStyle(
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(
                     width: 15,
                   ),
-                  Container(
-                    width: 270,
-                    height: 200,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF3DA0A7),
-                      borderRadius: BorderRadius.circular(15), // حواف دائرية
-                      image: const DecorationImage(
-                        image: AssetImage('asstes/image/Card 2.png'),
-                        // صورة من مجلد assets
-                        fit: BoxFit.cover,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        SweetView.routeName,
+                      );
+                    },
+                    child: Container(
+                      width: 270,
+                      height: 200,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF3DA0A7),
+                        borderRadius: BorderRadius.circular(15), // حواف دائرية
+                        image: const DecorationImage(
+                          image: AssetImage('asstes/image/Card 2.png'),
+                          // صورة من مجلد assets
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    ),
-                    child: const Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Spacer(),
-                        Padding(
-                          padding:
-                              EdgeInsets.only(left: 15, bottom: 25, right: 60),
-                          child: Text(
-                            'Healthy Taco Salad with fresh vegetable',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                      child: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Spacer(),
+                          Padding(
+                            padding:
+                                EdgeInsets.only(left: 15, bottom: 25, right: 60),
+                            child: Text(
+                              'SWEET',
+                              style: TextStyle(
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(
                     width: 15,
                   ),
-                  Container(
-                    width: 270,
-                    height: 200,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF3DA0A7),
-                      borderRadius: BorderRadius.circular(15), // حواف دائرية
-                      image: const DecorationImage(
-                        image: AssetImage('asstes/image/Card.png'),
-                        // صورة من مجلد assets
-                        fit: BoxFit.cover,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        ReadyToCook.routeName,
+                      );
+                    },
+                    child: Container(
+                      width: 270,
+                      height: 200,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF3DA0A7),
+                        borderRadius: BorderRadius.circular(15), // حواف دائرية
+                        image: const DecorationImage(
+                          image: AssetImage('asstes/image/Card.png'),
+                          // صورة من مجلد assets
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    ),
-                    child: const Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Spacer(),
-                        Padding(
-                          padding:
-                              EdgeInsets.only(left: 15, bottom: 25, right: 60),
-                          child: Text(
-                            'Healthy Taco Salad with fresh vegetable',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                      child: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Spacer(),
+                          Padding(
+                            padding:
+                                EdgeInsets.only(left: 15, bottom: 25, right: 60),
+                            child: Text(
+                              'READY TO COOK',
+                              style: TextStyle(
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ],
