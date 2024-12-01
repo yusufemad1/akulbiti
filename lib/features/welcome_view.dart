@@ -30,9 +30,9 @@ class WelcomeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Spacer(),
-              Padding(
-                padding: const EdgeInsets.all(17),
-                child: const Text(
+              const Padding(
+                padding: EdgeInsets.all(17),
+                child: Text(
                   'Help your path to health goals with happiness',
                   style: TextStyle(
                     fontSize: 28,
