@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'home/pages/home_page.dart';
 
 class SettingsProvider extends ChangeNotifier {
-  List<Widget> screans = [ HomePage(),const SearchView(), const SettingView()];
+  List<Widget> screans = [ HomePage(),const SearchView(),  SettingView()];
   int currentIndex = 0;
   ThemeMode currentThemeMode = ThemeMode.light;
 
